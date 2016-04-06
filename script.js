@@ -12,6 +12,7 @@ function xmlParser(xml) {
         var chanel_name = $(this).find('display-name').text();
         $( ".chanel_name" ).append(chanel_name);
         var chanel_logo = $(this).find('logo').text();
-        $( ".chanel_img" ).append(chanel_logo);
+        /*$( ".chanel_img" ).append(chanel_logo);*/
+        $(".chanel_img").html("<div class="chanel_img" style="background: rgba(255,255,255,.8) url(chanel_logo) no-repeat;"></div>");
 });
     };
