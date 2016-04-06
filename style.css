@@ -75,6 +75,7 @@ body {
   margin: 15px;
   /*font: 20px 'Open Sans Condensed';*/
   font: 25px 'Director';
+  letter-spacing: 2px;
 }
 .scheduling{
   padding: 20px;
