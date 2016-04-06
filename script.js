@@ -7,7 +7,7 @@ if (window.XMLHttpRequest) {
 request.open('GET', 'RTR.xml');
 request.onreadystatechange = function(){
 	if ((request.readyState===4) && (request.Status===200)) {
-		console.log(request.responseXML);
+		console.log(request.responseXML.getElementsByTagName('name')[0]);
 	}
 }
 request.send();
