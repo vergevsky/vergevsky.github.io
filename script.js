@@ -15,5 +15,3 @@ function xmlParser(xml) {
         $( ".chanel_img" ).append(chanel_logo);
 });
     };
-
-}
