@@ -9,8 +9,12 @@ $(document).ready(function () {
 
 function xmlParser(xml) {
     $(xml).find("channel").each(function () {
-        var page_url = $(this).find('display-name').text();
-        $( ".chanel_name" ).append(page_url);
+        var chanel_name = $(this).find('display-name').text();
+        $( ".chanel_name" ).append(chanel_name);
+        var chanel_logo = $(this).find('logo').text();
+        $(document).ready(function(){
+         $(".chanel_img").css('background: rgba(255,255,255,.8) url('+ chanel_logo + ') no-repeat;');
+});
     });
 
 }
