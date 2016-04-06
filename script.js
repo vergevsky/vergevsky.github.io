@@ -10,6 +10,6 @@ $(document).ready(function () {
 function xmlParser(xml) {
     $(xml).find("channel").each(function () {
         var page_url = $(this).find('display-name').text();
-        $( "#update" ).append( $page_url.text() );
+        $( "#update" ).append( page_url.text() );
     });
 }
