@@ -67,6 +67,7 @@ body {
   background-size: 30px;
   background-position: center center;
   float: left;
+  margin-left: 10px;
 }
 .chanel_name{
   color: #fff;
