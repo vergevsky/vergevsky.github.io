@@ -1,21 +1,15 @@
-var request;
-if (window.XMLHttpRequest) {
-    request = new XMLHttpRequest();
-} else {
-    request = new ActiveXObject("Microsoft.XMLHTTP");
+$(document).ready(function () {
+    $.ajax({
+        type: "GET",
+        url: "RTR.xml",
+        dataType: "xml",
+        success: xmlParser
+    });
+});
+
+function xmlParser(xml) {
+    $(xml).find("channel").each(function () {
+        var page_url = $(this).find('display-name').text();
+        alert(page_url);
+    });
 }
-request.open('GET', 'RTR.xml');
-request.onreadystatechange = function() {
-    if ((request.readyState===4) && (request.status===200)) {
-        console.log(request.responseXML.getElementsByTagName('display-name')[1]);
-        
-        var items = request.responseXML.getElementsByTagName('display-name');
-        var output = '<ul>';
-        for (var i = 0; i < items.length; i++) {
-            output += '<li>' + items[i] + '</li>';
-        }
-        output += '</ul>';
-        document.getElementById('update').innerHTML = output;
-    }
-}
-request.send();
