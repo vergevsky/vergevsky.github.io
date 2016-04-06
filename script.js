@@ -14,6 +14,6 @@ function xmlParser(xml) {
         var chanel_logo = $(this).find('logo').text();
         $( ".chanel_img" ).append(chanel_logo);
 });
-    });
+    };
 
 }
