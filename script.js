@@ -1,21 +1,21 @@
-$(document).ready(function () {
-    $.ajax({
-        type: "GET",
-        url: "RTR.xml",
-        dataType: "xml",
-        success: xmlParser
-    });
-});
-
-function xmlParser(xml) {
-
-    $('#load').fadeOut();
-
-    $(xml).find("display-name").each(function () {
-
-        $(".main").append('<div class="book"><div class="title">' + $(this).find("display-name").text() + '</div></div>');
-        $(".book").fadeIn(1000);
-
-    });
-
+var request;
+if (window.XMLHttpRequest) {
+    request = new XMLHttpRequest();
+} else {
+    request = new ActiveXObject("Microsoft.XMLHTTP");
 }
+request.open('GET', 'RTR.xml');
+request.onreadystatechange = function() {
+    if ((request.readyState===4) && (request.status===200)) {
+        console.log(request.responseXML.getElementsByTagName('display-name')[1].firstChild.nodeValue);
+        
+        var items = request.responseXML.getElementsByTagName('display-name');
+        var output = '<ul>';
+        for (var i = 0; i < items.length; i++) {
+            output += '<li>' + items[i].firstChild.nodeValue + '</li>';
+        }
+        output += '</ul>';
+        document.getElementById('update').innerHTML = output;
+    }
+}
+request.send();
