@@ -33,7 +33,7 @@ body {
 .current_video:after{
   width:42px;
   height:42px;
-  background:rgba(0,0,0,.5) url('https://psv4.vk.me/c615323/u98841594/docs/e97336981af8/10584-200.png') no-repeat;
+  background:rgba(0,0,0,.5) url('10584-200.png') no-repeat;
   background-size: 25px;
   background-position: center center;
   content:' ';
@@ -75,7 +75,7 @@ body {
   margin: 15px;
   /*font: 20px 'Open Sans Condensed';*/
   font: 25px 'Director';
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 .scheduling{
   padding: 20px;
