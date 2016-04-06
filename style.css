@@ -70,8 +70,8 @@ body {
 }
 .chanel_name{
   color: #fff;
-  position:relative;
-  top: 10px;
+  /*position:relative;
+  top: 10px;*/
   margin: 15px;
   /*font: 20px 'Open Sans Condensed';*/
   font: 25px 'Director';
