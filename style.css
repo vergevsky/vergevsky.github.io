@@ -72,10 +72,10 @@ body {
   color: #fff;
   /*position:relative;
   top: 10px;*/
-  margin: 15px;
   /*font: 20px 'Open Sans Condensed';*/
   font: 25px 'Director';
   letter-spacing: 1px;
+  padding: 10px;
 }
 .scheduling{
   padding: 20px;
