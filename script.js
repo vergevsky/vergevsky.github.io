@@ -21,7 +21,8 @@ function xmlParser(xml) {
         i = i + 1;
         $(xml).find('programme id="124156"' + i).each(function () {
         var program_name = $(this).find('name').text();
-        $( ".program li" ).append(program_name);
+        content = content + '<li>' + $( ".program" ).append(program_name) +'</li>';
+        /*$( ".program" ).append(program_name);*/
     });
 }
     };
