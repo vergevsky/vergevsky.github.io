@@ -16,8 +16,12 @@ function xmlParser(xml) {
         /*$(".chanel_logo").css("background: rgba(255,255,255,.8) url(" + chanel_logo + ") no-repeat;");*/
         $('.chanel_img').attr('style','background: rgba(255,255,255,.8) url(' + chanel_logo + ') no-repeat; background-size: 40px; background-position: center center;');
 });
-    $(xml).find("programme").each(function () {
+    var i = 3405;
+    while (i<3586){
+        i = i + 1;
+        $(xml).find('programme id="124156"' + i).each(function () {
         var program_name = $(this).find('name').text();
-        $( ".program" ).append(program_name);
-});
+        $( ".program li" ).append(program_name);
+    });
+}
     };
